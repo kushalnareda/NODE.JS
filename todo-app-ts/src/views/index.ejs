@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <%= task.description %>
+                <form action="/tasks/<%= task.id %>" method="POST" style="display:inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit">Delete</button>
+                </form>                
+            </li>
+        <% }); %>
+    </ul>
+    <form action="/tasks" method="POST">
+        <input type="text" name="newTask" required>
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+</html>
