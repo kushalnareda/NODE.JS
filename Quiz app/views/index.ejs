@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz: What's Your Favorite Game?</h1>
+        <form action="/submit" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="answer">Choose your favorite game:</label>
+            <select id="answer" name="answer" required>
+                <option value="a">Cricket</option>
+                <option value="b">Football</option>
+                <option value="c">Basketball</option>
+                <option value="d">Soccer</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
